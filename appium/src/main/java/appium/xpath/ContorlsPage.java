@@ -79,7 +79,8 @@ public class ContorlsPage extends Actions {
 		HillHold.click();
 	}
 	
-	public void abs() {
+	public void abs() throws InterruptedException {
+		Thread.sleep(2000);
 		ABS.click();
 	}
 	

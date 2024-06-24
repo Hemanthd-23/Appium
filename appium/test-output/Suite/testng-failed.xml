@@ -10,12 +10,22 @@
         <methods>
           <include name="Onboards"/>
           <include name="configure"/>
+          <include name="afterMethod"/>
           <include name="close"/>
         </methods>
       </class> <!-- Uv.appium.Onboard -->
+      <class name="Uv.appium.Statistics">
+        <methods>
+          <include name="Stats"/>
+          <include name="configure"/>
+          <include name="afterMethod"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- Uv.appium.Statistics -->
       <class name="Uv.appium.Diagnostics">
         <methods>
           <include name="diagnostic"/>
+          <include name="afterMethod"/>
           <include name="configure"/>
           <include name="close"/>
         </methods>
@@ -24,6 +34,7 @@
         <methods>
           <include name="contol"/>
           <include name="configure"/>
+          <include name="afterMethod"/>
           <include name="close"/>
         </methods>
       </class> <!-- Uv.appium.Controls -->

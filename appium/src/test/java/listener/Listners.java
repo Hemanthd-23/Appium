@@ -2,6 +2,7 @@ package listener;
 
 import java.io.IOException;
 
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -19,7 +20,6 @@ public class Listners extends AppiumReport implements ITestListener{
 		ExtentTest test;
 		ExtentReports extent=AppiumReport.getReport();
 
-		
 		@Override
 		public void onTestStart(ITestResult result) {
 			test=extent.createTest(result.getMethod().getMethodName());
@@ -47,11 +47,11 @@ public class Listners extends AppiumReport implements ITestListener{
 		}
 		@Override
 		public void onTestSkipped(ITestResult result) {
-			System.out.println("onTestSkipped Method" +result.getName());
+			System.out.println("TestSkipped Method" +result.getName());
 		}
 		@Override
 		public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-			System.out.println("onTestFailedButWithinSuccessPercentage" +result.getName());
+			System.out.println("Test Failed But Within Success Percentage" +result.getName());
 		}
 		
 		@Override

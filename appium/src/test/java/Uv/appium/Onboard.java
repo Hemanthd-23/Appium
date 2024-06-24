@@ -35,7 +35,7 @@ public void Onboards() throws InterruptedException{
 	
 	//swipe up
 	a.SwipeActions(onb.onboardingSwipeUp,"up");
-	Thread.sleep(4000);
+	Thread.sleep(2000);
 	
 
 	//Setting up

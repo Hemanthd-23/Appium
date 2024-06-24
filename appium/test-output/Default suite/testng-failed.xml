@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Uv.appium.Sample_test_case">
+      <class name="Uv.appium.Assist">
         <methods>
-          <include name="test"/>
+          <include name="assist"/>
+          <include name="afterMethod"/>
           <include name="configure"/>
           <include name="close"/>
         </methods>
-      </class> <!-- Uv.appium.Sample_test_case -->
+      </class> <!-- Uv.appium.Assist -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -81,6 +81,38 @@ public class SettingsPage extends Actions {
 		@AndroidFindBy(accessibility = "Logout")
 		private WebElement Logout;
 		
+		@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"VIOLETTE\"]/following-sibling::android.view.View[1]")
+		private WebElement CrashAlert;
+		
+		@AndroidFindBy(xpath = "//android.widget.LinearLayout[@resource-id=\"com.android.permissioncontroller:id/content_container\"]/android.widget.LinearLayout")
+		private WebElement allow;
+		
+		@AndroidFindBy(accessibility = "Update Contact")
+		private WebElement UpdateContact;
+		
+		@AndroidFindBy(xpath = "//android.widget.LinearLayout[@resource-id=\"com.samsung.android.app.contacts:id/contact_list_text_area\"]")
+		private WebElement SelectContact;
+		
+		@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"VIOLETTE\"]/following-sibling::android.view.View[2]")
+		private WebElement ACWs;
+		
+		@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"VIOLETTE\"]/following-sibling::android.view.View[3]")
+		private WebElement Deltawatch;
+		
+		@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"A.C.W.S\"]/following-sibling::android.view.View[1]/android.view.View[1]")
+		private WebElement DeltawatchIndication;
+		
+		@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"A.C.W.S\"]/following-sibling::android.view.View[1]/android.view.View[2]")
+		private WebElement MotorarmedWarning;
+		
+		@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"DELTA WATCH\"]/following-sibling::android.view.View[1]/android.view.View[1]")
+		private WebElement Movementalert;
+		
+		@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"DELTA WATCH\"]/following-sibling::android.view.View[1]/android.view.View[2]")
+		private WebElement Fallalert;
+		
+		@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"DELTA WATCH\"]/following-sibling::android.view.View[1]/android.view.View[3]")
+		private WebElement Towalert;
 		
 		//METHODS
 		
@@ -115,7 +147,7 @@ public class SettingsPage extends Actions {
 		}
 		
 		public void violette() {
-			//neeed to be filled
+			Violette.click();
 		}
 		
 		public void update() throws InterruptedException {
@@ -127,11 +159,47 @@ public class SettingsPage extends Actions {
 			GoBack.click();
 		}
 		
+		public void logout() {
+			Logout.click();
+		}
 		
+		public void crashAlert() throws InterruptedException {
+			CrashAlert.click();
+		}
+		public void Allow() {
+			allow.click();
+		}
 		
-		
-		
-		
+		public void updateConatct() throws InterruptedException {
+			UpdateContact.click();
+			Thread.sleep(2000);
+			SelectContact.click();
+		}
 	
+		public void ACWS() {
+			ACWs.click();
+		}
 		
+		public void DeltaWatchIndication() {
+			DeltawatchIndication.click();
+		}
+		
+		public void MotorArmedWarning() {
+			MotorarmedWarning.click();
+		}
+		 public void DeltaWatch() {
+			 Deltawatch.click();
+		 }
+		 
+		 public void MovementAlert() {
+			 Movementalert.click();
+		 }
+		 
+		 public void FallAlert() {
+			 Fallalert.click();
+		 }
+		 
+		 public void TowAlert() {
+			 Towalert.click();
+		 }
 }
